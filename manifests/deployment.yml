@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: raoulholzerpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raoulholzerpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: raoulholzerpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: raoulholzerpipelinesjavascriptdocker 
+          image: rhcontainerregistry.azurecr.io/raoulholzerpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
